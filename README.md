@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+And this demo use [concent](https://github.com/concentjs/concent) to manage state and handle state changing logic.
+
 ## Getting Started
 
 First, run the development server:
