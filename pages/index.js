@@ -1,9 +1,14 @@
 import React from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import './runConcent'
-import { useConcent } from 'concent';
+import { useConcent, getState } from 'concent';
+import router from 'next/router'
 
+function toCounterPage(){
+  // const rootState = getState()
+  // localStorage.setItem('app.rootState', JSON.stringify((rootState)))
+  router.push('/counter');
+}
 
 function setup(ctx){
   ctx.effect(()=>{
@@ -51,6 +56,8 @@ export default function Home() {
 
         <Tip />
         <Tip />
+        <br />
+        <button onClick={toCounterPage}> to counter page</button>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
