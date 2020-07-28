@@ -44,6 +44,7 @@ export default function Home() {
         </p>
 
         <Tip />
+        <Tip />
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>

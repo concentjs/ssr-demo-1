@@ -7,7 +7,7 @@ function delay(ms = 2000) {
 run({
   home: {
     state: {
-      tip: 'hello concent'
+      tip: 'hello concent', loading: false,
     },
     reducer: {
       changeTip(e) {
