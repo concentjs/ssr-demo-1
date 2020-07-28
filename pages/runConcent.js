@@ -19,6 +19,11 @@ run({
         await delay();
         return { tip: 'fetched tip at ' + Date.now(), loading: false };
       }
+    },
+    computed:{
+      reversedTip({tip}){
+        return tip.split('').reverse().join('');
+      }
     }
   }
 })

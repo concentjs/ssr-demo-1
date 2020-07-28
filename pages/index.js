@@ -13,11 +13,12 @@ function setup(ctx){
 }
 
 function Tip() {
-  const { state, mr } = useConcent({ module: 'home', setup })
+  const { state, mr, moduleComputed } = useConcent({ module: 'home', setup })
   return (
     <div>
       {state.loading ? 'loading' : 'done'}
-      <h1>{state.tip}</h1>
+      <h1>tip: {state.tip}</h1>
+      <h2>reversedTip: {moduleComputed.reversedTip}</h2>
       <input value={state.tip} onChange={mr.changeTip} />
       <button onClick={mr.fetchData}>fetch data</button>
     </div>
