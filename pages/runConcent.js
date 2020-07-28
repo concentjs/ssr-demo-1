@@ -14,14 +14,17 @@ run({
         const tip = e.target.value;
         return { tip };
       },
+      suffixBomb(p, m) {
+        return { tip: `${m.tip}_bomb` };
+      },
       async fetchData(p, m, ac) {
         ac.setState({ loading: true });
         await delay();
         return { tip: 'fetched tip at ' + Date.now(), loading: false };
       }
     },
-    computed:{
-      reversedTip({tip}){
+    computed: {
+      reversedTip({ tip }) {
         return tip.split('').reverse().join('');
       }
     }

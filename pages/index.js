@@ -9,11 +9,15 @@ function setup(ctx){
   ctx.effect(()=>{
     // didMount
     ctx.mr.fetchData();
-  }, [])
+  }, []);
+
+  return {
+    suffixBomb: () => ctx.mr.suffixBomb(),
+  }
 }
 
 function Tip() {
-  const { state, mr, moduleComputed } = useConcent({ module: 'home', setup })
+  const { state, mr, moduleComputed, settings } = useConcent({ module: 'home', setup })
   return (
     <div>
       {state.loading ? 'loading' : 'done'}
@@ -21,6 +25,7 @@ function Tip() {
       <h2>reversedTip: {moduleComputed.reversedTip}</h2>
       <input value={state.tip} onChange={mr.changeTip} />
       <button onClick={mr.fetchData}>fetch data</button>
+      <button onClick={settings.suffixBomb}>suffix bomb</button>
     </div>
   )
 }
