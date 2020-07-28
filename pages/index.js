@@ -1,11 +1,35 @@
+import React from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import './runConcent'
+import { useConcent } from 'concent';
+
+
+function setup(ctx){
+  ctx.effect(()=>{
+    // didMount
+    ctx.mr.fetchData();
+  }, [])
+}
+
+function Tip() {
+  const { state, mr } = useConcent({ module: 'home', setup })
+  return (
+    <div>
+      {state.loading ? 'loading' : 'done'}
+      <h1>{state.tip}</h1>
+      <input value={state.tip} onChange={mr.changeTip} />
+      <button onClick={mr.fetchData}>fetch data</button>
+    </div>
+  )
+}
+
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Create Next App-concent</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -15,9 +39,11 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Get---> started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
         </p>
+
+        <Tip />
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>

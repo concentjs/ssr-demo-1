@@ -1894,6 +1894,11 @@ concat-stream@^1.5.0:
     readable-stream "^2.2.2"
     typedarray "^0.0.6"
 
+concent@^2.7.27:
+  version "2.7.27"
+  resolved "https://registry.npmjs.org/concent/-/concent-2.7.27.tgz#a2376def1903d386ab541afc438d9c2355163b32"
+  integrity sha512-zPE4YdO7DxbH170AY82Z4R35OIESymq3OrESlqI3CAxduGlzBE1/X68ZMH0f4zajKVc6bmL9Wk2zFMvwRh/EmA==
+
 console-browserify@^1.1.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/console-browserify/-/console-browserify-1.2.0.tgz#67063cef57ceb6cf4993a2ab3a55840ae8c49336"
