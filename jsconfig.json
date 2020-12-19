@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": "pages",
+    "experimentalDecorators":true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

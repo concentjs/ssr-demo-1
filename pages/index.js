@@ -5,9 +5,11 @@ import { useConcent, getState } from 'concent';
 import router from 'next/router'
 
 function toCounterPage(){
-  // const rootState = getState()
-  // localStorage.setItem('app.rootState', JSON.stringify((rootState)))
   router.push('/counter');
+}
+
+function toPostPage(){
+  router.push('/post-page');
 }
 
 function setup(ctx){
@@ -57,7 +59,8 @@ export default function Home() {
         <Tip />
         <Tip />
         <br />
-        <button onClick={toCounterPage}> to counter page</button>
+        <button onClick={toCounterPage} style={{color:'blue'}}> to counter page</button>
+        <button onClick={toPostPage} style={{color:'blue'}}> to post page</button>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
