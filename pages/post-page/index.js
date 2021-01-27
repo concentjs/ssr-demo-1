@@ -1,4 +1,4 @@
-/** @typedef {import('types/store').CtxM<{}, 'test'>} Ctx */
+/** @typedef {import('../types/store').CtxM<{}, 'test'>} Ctx */
 import React from 'react'
 import { useConcent, setState, getState } from 'concent'
 import router from 'next/router'
@@ -11,15 +11,30 @@ function toHomePage() {
 }
 
 // 此函数在构建时被调用
-export async function getStaticProps() {
-  // 调用外部 API 获取博文列表
-  await delay();
+// export async function getStaticProps() {
+//   console.log('getStaticProps');
+//   // 调用外部 API 获取博文列表
+//   await delay();
+//   const posts = [
+//     { id: 1, name: 'post1 -----' },
+//     { id: 2, name: 'post2 --- welcome to use concent' },
+//   ];
+
+//   // 这个返回对象会透传给 根组件的pageProps，在那里将状态记录到store
+//   return {
+//     props: {
+//       module: 'test',
+//       state: { posts },
+//     }
+//   };
+// }
+
+export function getServerSideProps() {
+  console.log('getServerSideProps');
   const posts = [
     { id: 1, name: 'post1 -----' },
     { id: 2, name: 'post2 --- welcome to use concent' },
   ];
-
-  // 这个返回对象会透传给 根组件的pageProps，在那里将状态记录到store
   return {
     props: {
       module: 'test',

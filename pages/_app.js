@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import './runConcent'
+import '../runConcent'
 import { setState } from 'concent';
 
 function MyApp({ Component, pageProps }) {
