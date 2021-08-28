@@ -4,16 +4,16 @@ import styles from '../styles/Home.module.css'
 import { useConcent, getState } from 'concent';
 import router from 'next/router'
 
-function toCounterPage(){
+function toCounterPage() {
   router.push('/counter');
 }
 
-function toPostPage(){
+function toPostPage() {
   router.push('/post-page');
 }
 
-function setup(ctx){
-  ctx.effect(()=>{
+function setup(ctx) {
+  ctx.effect(() => {
     // didMount
     ctx.mr.fetchData();
   }, []);
@@ -48,7 +48,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://nextjs.org">Next.js</a> & <a href="https://github.com/concentjs/concent">Concent</a>
         </h1>
 
         <p className={styles.description}>
@@ -59,8 +59,8 @@ export default function Home() {
         <Tip />
         <Tip />
         <br />
-        <button onClick={toCounterPage} style={{color:'blue'}}> to counter page</button>
-        <button onClick={toPostPage} style={{color:'blue'}}> to post page</button>
+        <button onClick={toCounterPage} style={{ color: 'blue' }}> to counter page</button>
+        <button onClick={toPostPage} style={{ color: 'blue' }}> to post page</button>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>

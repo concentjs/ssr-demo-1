@@ -1,4 +1,4 @@
-/** @typedef {import('../types/store').CtxM<{}, 'test'>} Ctx */
+/** @typedef {import('../../types/store').CtxM<{}, 'test'>} Ctx */
 import React from 'react'
 import { useConcent, setState, getState } from 'concent'
 import router from 'next/router'
